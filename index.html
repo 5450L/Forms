@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <header>
+      <h2>How can we help you?</h2>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <label for="username">Your name</label>
+        <input type="text" name="user-name" id="username" value="UserName" />
+
+        <label for="usermassage">Your massage</label>
+        <textarea name="user-message" id="usermessage"></textarea>
+
+        <label for="useremail">Your email</label>
+        <input type="email" name="user-email" id="useremail" />
+
+        <label for="password">Your password</label>
+        <input type="password" name="user-password" id="password" />
+
+        <label for="number">Your phone number</label>
+        <input type="number" name="user-number" step="1" id="number" />
+
+        <label for="birthdate">Your birthdate</label>
+        <input type="date" name="user-birthdate" id="birthdate" />
+        <hr />
+
+        <label for="favoritecolor">Your favorite color</label>
+        <select name="favorite-color" id="favoritecolor">
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+        </select>
+
+        <h2>How should verify your account?</h2>
+        <div class="verify-input">
+          <input type="radio" name="verify" id="sms" value="text" />
+          <label for="sms">SMS</label>
+        </div>
+
+        <div class="verify-input">
+          <input type="radio" name="verify" id="call" value="phone" />
+          <label for="call">Call</label>
+        </div>
+
+        <div class="verify-input">
+          <input type="radio" name="verify" id="email" value="email" />
+          <label for="email">Email</label>
+        </div>
+
+        <div class="verify-input">
+          <input type="checkbox" name="agree-terms" id="terms" />
+          <label for="terms">Do you agree the terms?</label>
+        </div>
+
+        <div class="verify-input">
+          <input
+            type="checkbox"
+            name="contact"
+            id="checkboxsms"
+            value="checkbox-sms"
+          />
+          <label for="checkboxsms">Contact me via SMS</label>
+        </div>
+
+        <div class="verify-input">
+          <input
+            type="checkbox"
+            name="contact"
+            id="checkboxemail"
+            value="checkbox-email"
+          />
+          <label for="email">Contact me via Email</label>
+        </div>
+        <section class="btns">
+          <button>Submit</button>
+          <button>Clear</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
