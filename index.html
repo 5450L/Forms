@@ -14,79 +14,111 @@
   </head>
   <body>
     <header>
-      <h2>How can we help you?</h2>
+      <h1>Contact Us</h1>
     </header>
     <main>
       <form action="/" method="GET">
-        <label for="username">Your name</label>
-        <input type="text" name="user-name" id="username" value="UserName" />
+        <h2>How can we help you?</h2>
 
-        <label for="usermassage">Your massage</label>
-        <textarea name="user-message" id="usermessage"></textarea>
+        <section class="verification-info">
+          <label for="username">Your Name</label>
+          <input
+            type="text"
+            name="user-name"
+            id="username"
+            placeholder="Your Name"
+            required
+          />
 
-        <label for="useremail">Your email</label>
-        <input type="email" name="user-email" id="useremail" />
+          <label for="useremail">Your Email</label>
+          <input
+            type="email"
+            name="user-email"
+            id="useremail"
+            placeholder="qwetertqwer@gmail.com"
+            required
+          />
 
-        <label for="password">Your password</label>
-        <input type="password" name="user-password" id="password" />
+          <label for="phonenumber">Your Phone Number</label>
+          <input
+            type="number"
+            name="phone-number"
+            id="phonenumber"
+            placeholder="+000000000000"
+            required
+            minlength="13"
+            maxlength="13"
+          />
+        </section>
 
-        <label for="number">Your phone number</label>
-        <input type="number" name="user-number" step="1" id="number" />
+        <section class="user-message">
+          <label for="usermassage">Your Message</label>
+          <textarea name="user-message" id="usermessage" required rows="6" ></textarea>
+        </section>
 
-        <label for="birthdate">Your birthdate</label>
-        <input type="date" name="user-birthdate" id="birthdate" />
+        <section class="selector">
+          <label for="findus">How did you find us?</label>
+          <select name="find-us" id="findus">
+            <option value="web">Web Search</option>
+            <option value="friend">Friend advice</option>
+            <option value="advertisement">Advertisement</option>
+          </select>
+        </section>
+
+        <section class="feedback">
+          <h2>How should we reply?</h2>
+          <ul>
+            <li>
+              <div class="responce">
+                <input
+                  type="radio"
+                  name="call"
+                  id="call"
+                  value="phone"
+                  required
+                />
+                <label for="call">Call</label>
+              </div>
+            </li>
+
+            <li>
+              <div class="responce">
+                <input
+                  type="radio"
+                  name="email"
+                  id="email"
+                  value="email"
+                  required
+                />
+                <label for="email">Email</label>
+              </div>
+            </li>
+
+            <li>
+              <div class="responce">
+                <input
+                  type="radio"
+                  name="responce"
+                  id="noreply"
+                  value="noreply"
+                  required
+                />
+                <label for="noreply">Don`t reply</label>
+              </div>
+            </li>
+          </ul>
+        </section>
         <hr />
+        <section class="terms">
+          <div class="accept-terms">
+            <input type="checkbox" name="accept-terms" id="terms" required />
+            <label for="terms">Accept terms</label>
+          </div>
+        </section>
 
-        <label for="favoritecolor">Your favorite color</label>
-        <select name="favorite-color" id="favoritecolor">
-          <option value="red">Red</option>
-          <option value="green">Green</option>
-          <option value="blue">Blue</option>
-        </select>
-
-        <h2>How should verify your account?</h2>
-        <div class="verify-input">
-          <input type="radio" name="verify" id="sms" value="text" />
-          <label for="sms">SMS</label>
-        </div>
-
-        <div class="verify-input">
-          <input type="radio" name="verify" id="call" value="phone" />
-          <label for="call">Call</label>
-        </div>
-
-        <div class="verify-input">
-          <input type="radio" name="verify" id="email" value="email" />
-          <label for="email">Email</label>
-        </div>
-
-        <div class="verify-input">
-          <input type="checkbox" name="agree-terms" id="terms" />
-          <label for="terms">Do you agree the terms?</label>
-        </div>
-
-        <div class="verify-input">
-          <input
-            type="checkbox"
-            name="contact"
-            id="checkboxsms"
-            value="checkbox-sms"
-          />
-          <label for="checkboxsms">Contact me via SMS</label>
-        </div>
-
-        <div class="verify-input">
-          <input
-            type="checkbox"
-            name="contact"
-            id="checkboxemail"
-            value="checkbox-email"
-          />
-          <label for="email">Contact me via Email</label>
-        </div>
         <section class="btns">
+          <button id="clear-btn">Clear</button>
           <button>Submit</button>
-          <button>Clear</button>
         </section>
       </form>
     </main>
